@@ -16,7 +16,6 @@
             var swiper = new Swiper(".mySwiper", {
                 spaceBetween: 30,
                 slidesPerView: 4,
-                /*  slidesOffsetBefore: 1, // 슬라이드 시작 부분 여백 */
                 scrollbar: {
                     el: ".swiper-scrollbar",
                     hide: false,
@@ -26,14 +25,6 @@
                     delay: 2500,
                     disableOnInteraction: false,
                 },
-                // pagination: {
-                //     el: ".swiper-pagination",
-                //     clickable: true,
-                // },
-                // navigation: {
-                //     nextEl: ".swiper-button-next",
-                //     prevEl: ".swiper-button-prev",
-                // }
             })
 
 
@@ -57,13 +48,7 @@
                 $('.menu_cont').slideToggle(600);
                 $('.span').toggleClass('on')
                 $('.search').toggleClass('on')
-
-
-                /* $('.main_visual::before').show() */
             });
-            // setTimeout(function () {
-            // $('.loginlist').removeClass('on')
-            // }, 1000)
 
             $('.menu_cont .menu1 li').mouseenter(function () {
                 $('.menu_cont .item').removeClass('on')
@@ -73,7 +58,6 @@
                 })
 
 
-                // $(this).eq($('.menu_cont .item').index()).addClass('on')
 
             })
             $('.menu_cont .menu1 li').mouseleave(function () {
@@ -105,152 +89,143 @@
                 })
             })
 
-         /*    $('.sec3 .inner .cont .list .item figure').mouseenter(function () {
-
-              
-            })
- */
-            $('.sec3 .inner .cont:nth-child(1) .list .item1 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(1) .list .item1 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/denimitem.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/denimitem1.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(1) .list .item1 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(1) .list .item1 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-                /* $('.sec3 .inner .cont .figure1').attr('src', 'img/denimitem.avif') */
             })
 
-            $('.sec3 .inner .cont:nth-child(1) .list .item2 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(1) .list .item2 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/denimitem3.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/denimitem4.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(1) .list .item2 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(1) .list .item2 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
-            $('.sec3 .inner .cont:nth-child(1) .list .item3 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(1) .list .item3 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/denimitem7.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/denimitem8.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(1) .list .item3 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(1) .list .item3 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
 
 
-            $('.sec3 .inner .cont:nth-child(2) .list .item1 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(2) .list .item1 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/edition2.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/edition1.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(2) .list .item1 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(2) .list .item1 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-                /* $('.sec3 .inner .cont .figure1').attr('src', 'img/denimitem.avif') */
             })
 
-            $('.sec3 .inner .cont:nth-child(2) .list .item2 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(2) .list .item2 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/edition3.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/edition4.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(2) .list .item2 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(2) .list .item2 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
-            $('.sec3 .inner .cont:nth-child(2) .list .item3 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(2) .list .item3 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/edition5.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/edition6.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(2) .list .item3 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(2) .list .item3 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
 
 
-            $('.sec3 .inner .cont:nth-child(3) .list .item1 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(3) .list .item1 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/dis3.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/dis4.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(3) .list .item1 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(3) .list .item1 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-                /* $('.sec3 .inner .cont .figure1').attr('src', 'img/denimitem.avif') */
             })
 
-            $('.sec3 .inner .cont:nth-child(3) .list .item2 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(3) .list .item2 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/dis1.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/dis2.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(3) .list .item2 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(3) .list .item2 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
-            $('.sec3 .inner .cont:nth-child(3) .list .item3 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(3) .list .item3 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/dis5.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/dis6.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(3) .list .item3 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(3) .list .item3 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
 
 
-            $('.sec3 .inner .cont:nth-child(4) .list .item1 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(4) .list .item1 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/kid1.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/kid2.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(4) .list .item1 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(4) .list .item1 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-                /* $('.sec3 .inner .cont .figure1').attr('src', 'img/denimitem.avif') */
             })
 
-            $('.sec3 .inner .cont:nth-child(4) .list .item2 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(4) .list .item2 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/kid8.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/kid4.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(4) .list .item2 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(4) .list .item2 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
-            $('.sec3 .inner .cont:nth-child(4) .list .item3 figure').mouseenter(function(){
+            $('.sec3 .inner .cont:nth-child(4) .list .item3 figure').mouseenter(function () {
                 $('.sec3 contimg img').css({ 'display': 'none' })
                 $('.figure').css({ 'display': 'flex' })
                 $('.sec3 .inner .cont .figure1 img').attr('src', 'img/kid7.jpg')
                 $('.sec3 .inner .cont .figure2 img').attr('src', 'img/kid6.jpg')
             })
-            $('.sec3 .inner .cont:nth-child(4) .list .item3 figure').mouseleave(function(){
+            $('.sec3 .inner .cont:nth-child(4) .list .item3 figure').mouseleave(function () {
                 $('.sec3 contimg img').css({ 'display': 'flex' })
                 $('.figure').css({ 'display': 'none' })
-               
+
             })
 
 
@@ -267,17 +242,6 @@
                 $('.sec5 .itemlist').eq($(this).index()).addClass('on')
                 $('.sec5 .inner .select li').removeClass('on')
                 $(this).addClass('on')
-
-                // $('.sec5 .inner .select li').css({
-                //     'font-weight': 'lighter',
-                //     'border-bottom': 'none',
-                //     'padding': 'none'
-                // })
-                // $(this).css({
-                //     'font-weight': 'bold',
-                //     'border-bottom': '2px solid #333',
-                //     'padding-bottom': '3px'
-                // })
             })
 
 
@@ -413,11 +377,6 @@
                 }
             })
 
-            /*   if(sec4Top < $(window).scrollTop()){
-                  $('.top').fadeIn().css({
-                  'background-color':'white',
-                  'color' : '#333'}) */
-
 
             $('.top').click(function () {
                 $('html, body').animate({
@@ -439,12 +398,12 @@
                     <div class="inner">
                         <div class="log">
                             <h1>로그인</h1>
-                            <img class="xicon" src="img/icons8-취소-50 (2).png" alt="">
+                            <img class="xicon" src="img/icons8-취소-50 (2).png" alt="닫기">
                         </div>
 
                         <p>다양한 할인 혜택과 이벤트, 보너스 쿠폰을 놓치지 마세요</p>
                         <div class="kakao">
-                            <img src="img/icons8-말풍선-30.png" alt="">
+                            <img src="img/icons8-말풍선-30.png" alt="말풍선">
                             <p>카카오로 로그인</p>
                         </div><!-- kakao end -->
                         <div class="line">
@@ -511,10 +470,10 @@
 
                             <div class="img">
                                 <figure>
-                                    <img src="img/now6.jpg" alt="">
+                                    <img src="img/now6.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/homeitem2.jpg" alt="">
+                                    <img src="img/homeitem2.jpg" alt="상품">
                                 </figure>
                             </div> <!-- img1 end -->
                         </div>
@@ -531,10 +490,10 @@
                             </ul><!-- women -->
                             <div class="img">
                                 <figure>
-                                    <img src="img/men3.jpg" alt="">
+                                    <img src="img/men3.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/men5-1.jpg" alt="">
+                                    <img src="img/men5-1.jpg" alt="상품">
                                 </figure>
                             </div> <!-- img1 end -->
                         </div>
@@ -552,10 +511,10 @@
 
                             <div class="img">
                                 <figure>
-                                    <img src="img/baby1.jpg" alt="">
+                                    <img src="img/baby1.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/baby9.jpg" alt="">
+                                    <img src="img/baby9.jpg" alt="상품">
                                 </figure>
                             </div> <!-- img1 end -->
                         </div><!-- item end -->
@@ -572,10 +531,10 @@
 
                             <div class="img">
                                 <figure>
-                                    <img src="img/yong8-1.jpg" alt="">
+                                    <img src="img/yong8-1.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/back2-1.jpg" alt="">
+                                    <img src="img/back2-1.jpg" alt="상품">
                                 </figure>
                             </div> <!-- img1 end -->
                         </div><!-- item end -->
@@ -591,10 +550,10 @@
                             </ul><!-- H&M HOME end -->
                             <div class="img">
                                 <figure>
-                                    <img src="img/hmgoepprod (10).jpg" alt="">
+                                    <img src="img/hmgoepprod (10).jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/hmgoepprod (3).jpg" alt="">
+                                    <img src="img/hmgoepprod (3).jpg" alt="상품">
                                 </figure>
                             </div> <!-- img end -->
                         </div><!-- item end -->
@@ -607,10 +566,10 @@
                             </ul><!-- sport end -->
                             <div class="img">
                                 <figure>
-                                    <img src="img/sport3.jpg" alt="">
+                                    <img src="img/sport3.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/sport10.jpg" alt="">
+                                    <img src="img/sport10.jpg" alt="상품">
                                 </figure>
                             </div> <!-- img end -->
                         </div><!-- item end -->
@@ -621,13 +580,13 @@
                             </ul>
                             <div class="img">
                                 <figure>
-                                    <img src="img/sale2.jpg" alt="">
+                                    <img src="img/sale2.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/sale.jpg" alt="">
+                                    <img src="img/sale.jpg" alt="상품">
                                 </figure>
                                 <figure>
-                                    <img src="img/sale5.jpg" alt="">
+                                    <img src="img/sale5.jpg" alt="상품">
                                 </figure>
                             </div> <!-- img end -->
                         </div><!-- item end -->
@@ -640,10 +599,10 @@
                             </ul><!-- keyi -->
                             <div class="img">
                                 <figure>
-                                    <img src="img/hmgoepprod (7).jpg" alt="">
+                                    <img src="img/hmgoepprod (7).jpg" alt="이미지">
                                 </figure>
                                 <figure>
-                                    <img src="img/hmgoepprod (4).jpg" alt="">
+                                    <img src="img/hmgoepprod (4).jpg" alt="이미지">
                                 </figure>
                             </div> <!-- img end -->
                         </div><!-- item end -->
@@ -663,10 +622,6 @@
                             <a href="#">favorite</a>
                             <a href="#">shopping bag</a>
                         </div>
-
-
-
-                        <!-- <div class="menu"><img src="img/icons8-메뉴-30 (1).png" alt=""></div> -->
                         <div id="nav-icon3">
                             <span></span>
                             <span></span>
@@ -735,7 +690,7 @@
                     <div class="left">
                         <div class="item item1">
                             <figure>
-                                <img src="img/now2.jpg" alt="">
+                                <img src="img/now2.jpg" alt="상품">
                             </figure>
                             <div class="textlist">
                                 <div class="text">
@@ -746,11 +701,10 @@
                             </div><!-- item -->
                         </div><!-- item end -->
                     </div><!-- left end -->
-
                     <div class="right">
                         <div class="item item2">
                             <figure>
-                                <img src="img/now7.jpg" alt="">
+                                <img src="img/now7.jpg" alt="상품">
                             </figure>
                             <div class="textlist">
                                 <div class="text">
@@ -762,7 +716,6 @@
                         </div><!-- item -->
                         <div class="item item3">
                             <figure>
-                                <!-- <img src="img/hmgoepprod (20).jpg" alt=""> -->
                                 <span>이미지</span>
                             </figure>
                             <div class="textlist">
@@ -777,7 +730,6 @@
                     <div class="left">
                         <div class="item item4">
                             <figure>
-                                <!-- <img src="img/now1.jpg" alt=""> -->
                                 <span>dlalwl</span>
                             </figure>
                             <div class="textlist">
@@ -792,7 +744,6 @@
                     <div class="right">
                         <div class="item item5">
                             <figure>
-                                <!-- <img src="img/now.jpg" alt=""> -->
                                 <span>dlalwl</span>
                             </figure>
                             <div class="textlist">
@@ -805,7 +756,6 @@
                         </div><!-- item -->
                         <div class="item item6">
                             <figure>
-                                <!-- <img src="img/now4.jpg" alt=""> -->
                                 <span>dlalwl</span>
                             </figure>
                             <div class="textlist">
@@ -817,7 +767,6 @@
                             </div>
                         </div><!-- item -->
                     </div><!-- right end -->
-                    <!-- </div> --><!-- left end -->
                 </div><!-- box end -->
             </div><!-- inner end -->
         </section><!-- sec2 end -->
@@ -836,21 +785,19 @@
                 <div class="contlist">
                     <div class="cont on cont1">
                         <figure class="contimg">
-                            <img src="img/denim3.jpg" alt="">
-                            <!--  <img src="img/denim3.jpg" alt=""> -->
+                            <img src="img/denim3.jpg" alt="배경">
                             <div class="figure">
                                 <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="">
+                                    <img src="img/denimitem.jpg" alt="상품">
                                 </figure>
                                 <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="">
+                                    <img src="img/denimitem1.jpg" alt="상품">
                                 </figure>
                             </div>
                         </figure>
                         <div class="list">
                             <div class="item item1">
                                 <figure>
-                                    <!-- <img src="img/denim1.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -859,7 +806,6 @@
                             </div><!-- item end -->
                             <div class="item item2">
                                 <figure>
-                                    <!-- <img src="img/denim2.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -868,7 +814,6 @@
                             </div><!-- item end -->
                             <div class="item item3">
                                 <figure>
-                                    <!-- <img src="img/denim5.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -881,21 +826,19 @@
 
                     <div class="cont cont2">
                         <figure class="contimg">
-                            <img src="img/edd.jpg" alt="">
-                            <!--  <img src="img/denim3.jpg" alt=""> -->
+                            <img src="img/edd.jpg" alt="배경">
                             <div class="figure">
                                 <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="">
+                                    <img src="img/denimitem.jpg" alt="상품">
                                 </figure>
                                 <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="">
+                                    <img src="img/denimitem1.jpg" alt="상품">
                                 </figure>
                             </div>
                         </figure>
                         <div class="list">
                             <div class="item item1">
                                 <figure>
-                                    <!-- <img src="img/denim1.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -904,7 +847,6 @@
                             </div><!-- item end -->
                             <div class="item item2">
                                 <figure>
-                                    <!-- <img src="img/denim2.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -913,7 +855,6 @@
                             </div><!-- item end -->
                             <div class="item item3">
                                 <figure>
-                                    <!-- <img src="img/denim5.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -926,21 +867,19 @@
 
                     <div class="cont">
                         <figure class="contimg">
-                            <img src="img/disney(1).jpg" alt="">
-                            <!--  <img src="img/denim3.jpg" alt=""> -->
+                            <img src="img/disney(1).jpg" alt="배경">
                             <div class="figure">
                                 <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="">
+                                    <img src="img/denimitem.jpg" alt="상품">
                                 </figure>
                                 <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="">
+                                    <img src="img/denimitem1.jpg" alt="상품">
                                 </figure>
                             </div>
                         </figure>
                         <div class="list">
                             <div class="item item1">
                                 <figure>
-                                    <!-- <img src="img/denim1.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -949,7 +888,6 @@
                             </div><!-- item end -->
                             <div class="item item2">
                                 <figure>
-                                    <!-- <img src="img/denim2.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -958,7 +896,6 @@
                             </div><!-- item end -->
                             <div class="item item3">
                                 <figure>
-                                    <!-- <img src="img/denim5.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -971,14 +908,13 @@
 
                     <div class="cont">
                         <figure class="contimg">
-                            <img src="img/junko-nakase-Q-72wa9-7Dg-unsplash.jpg" alt="">
-                            <!--  <img src="img/denim3.jpg" alt=""> -->
+                            <img src="img/junko-nakase-Q-72wa9-7Dg-unsplash.jpg" alt="배경">
                             <div class="figure">
                                 <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="">
+                                    <img src="img/denimitem.jpg" alt="상품">
                                 </figure>
                                 <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="">
+                                    <img src="img/denimitem1.jpg" alt="상품">
                                 </figure>
                             </div>
                         </figure>
@@ -986,7 +922,6 @@
 
                             <div class="item item1">
                                 <figure>
-                                    <!-- <img src="img/denim1.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -996,7 +931,6 @@
 
                             <div class="item item2">
                                 <figure>
-                                    <!-- <img src="img/denim2.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -1006,7 +940,6 @@
 
                             <div class="item item3">
                                 <figure>
-                                    <!-- <img src="img/denim5.jpg" alt=""> -->
                                     <span>epsla</span>
                                 </figure>
                                 <div class="text">
@@ -1021,12 +954,10 @@
 
         <section class="sec4">
             <div class="banner">
-                <!-- <img src="img/Group 5.jpg" alt=""> -->
-                <img src="img/Rectangle 1.png" alt="">
+                <img src="img/Rectangle 1.png" alt="배경">
                 <div class="img">
                     <figure>
                         <span>img</span>
-                        <!-- <img src="img/Rectangle 1 copy.png" alt=""> -->
                     </figure>
                 </div>
                 <h1>WEEKLY<BR>BEST ESLLER</h1>
@@ -1051,7 +982,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/yong8.jpg" alt="">
+                                <img src="img/yong8.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>퍼프 슬리브 드레스</p>
@@ -1062,14 +993,14 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/yong7.jpg" alt="">
+                                <img src="img/yong7.jpg" alt="상품">
                             </figure>
                             <p>데님 오버롤 팬츠</p>
                             <h4>₩39,900</h4>
                         </div><!-- item end -->
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/yong3.jpg" alt="">
+                                <img src="img/yong3.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>리브드 저지 드레스</p>
@@ -1080,7 +1011,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/yong5.jpg" alt="">
+                                <img src="img/yong5.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>리본 디테일 스트랩 탑</p>
@@ -1092,7 +1023,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/back5.jpg" alt="">
+                                <img src="img/back5.jpg" alt="상품">
                             </figure>
                             <p>스트라이프 니트</p>
                             <h4>₩ 29,900</h4>
@@ -1101,7 +1032,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/back6.jpg" alt="">
+                                <img src="img/back6.jpg" alt="상품">
                             </figure>
                             <p>블랙원피스</p>
                             <h4>₩ 39,900</h4>
@@ -1110,7 +1041,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/yong9.jpg" alt="">
+                                <img src="img/yong9.jpg" alt="상품">
                             </figure>
                             <p>리본 맨투맨</p>
                             <h4>₩ 24,900</h4>
@@ -1119,7 +1050,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/back1.jpg" alt="">
+                                <img src="img/back1.jpg" alt="상품">
                             </figure>
                             <p>스트라이프 티셔츠</p>
                             <h4>₩ 19,900</h4>
@@ -1136,7 +1067,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/yong1.jpg" alt="">
+                                <img src="img/yong1.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>헨리탑 2피스 세트</p>
@@ -1147,7 +1078,7 @@
                         <div class="swiper-slide item">
 
                             <figure>
-                                <img src="img/yong4-1.jpg" alt="">
+                                <img src="img/yong4-1.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>오버사이즈 셔츠</p>
@@ -1157,7 +1088,7 @@
 
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/yong6.jpg" alt="">
+                                <img src="img/yong6.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>코튼 셔츠 & 넥타이</p>
@@ -1167,7 +1098,7 @@
 
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/yong11-1.jpg" alt="">
+                                <img src="img/yong11-1.jpg" alt="상품">
                             </figure>
                             <div class="text">
                                 <p>오버사이즈 스웨트셔츠</p>
@@ -1178,7 +1109,7 @@
 
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/boy1-1.jpg" alt="">
+                                <img src="img/boy1-1.jpg" alt="상품">
                             </figure>
                             <p>프린트 코튼 티셔츠</p>
                             <h4>₩ 7,900</h4>
@@ -1186,7 +1117,7 @@
 
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/boy2-1.jpg" alt="">
+                                <img src="img/boy2-1.jpg" alt="상품">
                             </figure>
                             <p>Zip-top sweatshirt</p>
                             <h4>₩ 34,900</h4>
@@ -1194,7 +1125,7 @@
 
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/boy3-1.jpg" alt="">
+                                <img src="img/boy3-1.jpg" alt="상품">
                             </figure>
                             <p>Zip-through hoodie</p>
                             <h4>₩ 24,900</h4>
@@ -1202,7 +1133,7 @@
 
                         <div class="swiper-slide item">
                             <figure>
-                                <img src="img/boy4-1.jpg" alt="">
+                                <img src="img/boy4-1.jpg" alt="상품">
                             </figure>
                             <p>립스탑 파우치 쇼츠</p>
                             <h4>₩ 29,900</h4>
@@ -1223,7 +1154,7 @@
                 <div class="list">
                     <div class="item item1">
                         <figure>
-                            <img src="img/room.jpg" alt="">
+                            <img src="img/room.jpg" alt="상품">
                             <span>dlal</span>
                             <div class="price">
                                 <div class="price1">
@@ -1231,14 +1162,14 @@
                                         <p>월 데코레이션</p>
                                         <p>₩ 24,900</p>
                                     </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="">
+                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
                                 </div>
                                 <div class="price2">
                                     <div>
                                         <p>터프티드 코튼러그</p>
                                         <p>₩ 29,900</p>
                                     </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="">
+                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
                                 </div>
                             </div><!-- price end -->
                         </figure>
@@ -1247,7 +1178,7 @@
                             <div class="itemlist">
                                 <div class="fir">
                                     <figure>
-                                        <img src="img/room1.jpg" alt="">
+                                        <img src="img/room1.jpg" alt="상품">
                                         <span>dlal</span>
                                     </figure>
                                     <div>
@@ -1257,7 +1188,7 @@
                                 </div>
                                 <div class="sec">
                                     <figure>
-                                        <img src="img/room2.jpg" alt="">
+                                        <img src="img/room2.jpg" alt="상품">
                                         <span>dlal</span>
                                     </figure>
                                     <div>
@@ -1270,7 +1201,7 @@
                     </div><!-- item end -->
                     <div class="item item2">
                         <figure>
-                            <img src="img/home.jpg" alt="">
+                            <img src="img/home.jpg" alt="상품">
                             <span>dlal</span>
                             <div class="price">
                                 <div class="price1">
@@ -1278,7 +1209,7 @@
                                         <p>플라워패턴 이불커버세트</p>
                                         <p>₩ 69,900</p>
                                     </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="">
+                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
                                 </div>
                             </div><!-- price end -->
                         </figure>
@@ -1286,9 +1217,8 @@
                             <h2>The Bestsellers Shop</h2>
                             <div class="itemlist">
                                 <div class="fir">
-                                    <!-- <img src="img/room1.jpg" alt=""> -->
                                     <figure>
-                                        <img src="img/homeitem.jpg" alt="">
+                                        <img src="img/homeitem.jpg" alt="상품">
                                         <span>dlal</span>
                                     </figure>
                                     <div>
@@ -1299,7 +1229,7 @@
                                 </div>
                                 <div class="sec">
                                     <figure>
-                                        <img src="img/homeitem3.jpg" alt="">
+                                        <img src="img/homeitem3.jpg" alt="상품">
                                         <span>dlal</span>
                                     </figure>
                                     <div>
@@ -1313,7 +1243,7 @@
 
                     <div class="item item3">
                         <figure>
-                            <img src="img/room3.jpg" alt="">
+                            <img src="img/room3.jpg" alt="상품">
                             <span>dlal</span>
                             <div class="price">
                                 <div class="price1">
@@ -1321,15 +1251,8 @@
                                         <p>우드 행어</p>
                                         <p>₩ 14,900</p>
                                     </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="">
+                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
                                 </div>
-                                <!-- <div class="price2">
-                                    <div>
-                                        <p>터프티드 코튼러그</p>
-                                        <p>₩ 29,900</p>
-                                    </div>
-                                    <img src="img/icons8-을-더한-50 (1).png" alt="">
-                                </div> -->
                             </div><!-- price end -->
                         </figure>
                         <div class="text">
@@ -1337,7 +1260,7 @@
                             <div class="itemlist">
                                 <div class="fir">
                                     <figure>
-                                        <img src="img/home3.jpg" alt="">
+                                        <img src="img/home3.jpg" alt="상품">
                                         <span>dlal</span>
                                     </figure>
                                     <div>
@@ -1347,7 +1270,7 @@
                                 </div>
                                 <div class="sec">
                                     <figure>
-                                        <img src="img/homeitem4.jpg" alt="">
+                                        <img src="img/homeitem4.jpg" alt="상품">
                                         <span>dlal</span>
                                     </figure>
                                     <div>
@@ -1358,8 +1281,6 @@
                             </div><!-- itemlist end -->
                         </div><!-- text end -->
                     </div><!-- item end -->
-
-
                 </div><!-- list end -->
             </div><!-- inner end -->
         </section><!-- sec6 end -->
@@ -1379,24 +1300,26 @@
                     <li>info.kr@hm.com</li>
                 </ul>
                 <ul class="sns">
-                    <li><a href="https://www.facebook.com/hm"><img src="img/icons8-페이스-북-30.png" alt=""></a></li>
-                    <li><a href="https://twitter.com/hmsouthkorea"><img src="img/icons8-지저귀다-32.png" alt=""></a></li>
-                    <li><a href="https://www.instagram.com/hm/"><img src="img/icons8-인스-타-그램-30.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/hm"><img src="img/icons8-페이스-북-30.png" alt="페이스북"></a></li>
+                    <li><a href="https://twitter.com/hmsouthkorea"><img src="img/icons8-지저귀다-32.png" alt="트위터"></a></li>
+                    <li><a href="https://www.instagram.com/hm/"><img src="img/icons8-인스-타-그램-30.png" alt="인스타그램"></a>
+                    </li>
                     <li><a href="http://www.youtube.com/user/hennesandmauritz"><img src="img/icons8-유튜브-재생-48.png"
-                                alt=""></a></li>
-                    <li><a href="http://naver.me/F5ZGDdIf"><img src="img/icons8-엔-50.png" alt=""></a></li>
+                                alt="유튜브"></a></li>
+                    <li><a href="http://naver.me/F5ZGDdIf"><img src="img/icons8-엔-50.png" alt="네이버"></a></li>
                     <li><a href="https://plus.kakao.com/home/@H&M"><img
                                 src="img/icons8-kakaotalk-or-katalk-is-a-free-mobile-instant-messaging-application-for-smartphones-48.png"
-                                alt=""></a></li>
-                    <li><a href="https://www.pinterest.com/hm/"><img src="img/icons8-클립-30.png" alt=""></a></li>
+                                alt="카카오톡"></a></li>
+                    <li><a href="https://www.pinterest.com/hm/"><img src="img/icons8-클립-30.png" alt="핀터레스트"></a></li>
                 </ul>
-                <h1><img src="img/1x/Asset 1.png" alt=""></h1>
+                <h1><img src="img/1x/Asset 1.png" alt="푸터로고"></h1>
 
                 <div class="top">
                     <h1>TOP</h1>
                 </div><!-- top end -->
             </div><!-- inner end -->
         </footer>
+
     </div><!-- wrap end -->
 </body>
 
