@@ -1,1326 +1,1562 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>h&m korea</title>
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
     <script src="lib/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>$(function () {
+    <script>
+      $(function () {
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          slidesPerView: 4,
+          scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
 
-            var swiper = new Swiper(".mySwiper", {
-                spaceBetween: 30,
-                slidesPerView: 4,
-                scrollbar: {
-                    el: ".swiper-scrollbar",
-                    hide: false,
-                    draggable: true,
-                },
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-            })
+        $(".login .loginbtn").click(function () {
+          $(".login_page").css({
+            display: "block",
+          });
+          $(".span").addClass("on");
+        });
 
+        $(".login_page .xicon").click(function () {
+          $(".login_page").css({
+            display: "none",
+          });
+          $(".span").removeClass("on");
+        });
 
-            $('.login .loginbtn').click(function () {
-                $('.login_page').css({
-                    'display': 'block'
+        $("#nav-icon3").click(function () {
+          $(this).toggleClass("open");
+          $(".menu_cont").slideToggle(600);
+          $(".span").toggleClass("on");
+          $(".search").toggleClass("on");
+        });
 
-                })
-                $('.span').addClass('on')
-            })
+        $(".menu_cont .menu1 li").mouseenter(function () {
+          $(".menu_cont .item").removeClass("on");
+          $(this).css({
+            color: "#e01926",
+            "font-size": "19px",
+          });
+        });
+        $(".menu_cont .menu1 li").mouseleave(function () {
+          $(this).css({
+            color: "#333333",
+            "font-size": "18px",
+          });
+        });
 
-            $('.login_page .xicon').click(function () {
-                $('.login_page').css({
-                    'display': 'none'
-                })
-                $('.span').removeClass('on')
-            })
+        $(".menu_cont .menu1 li").mouseenter(function () {
+          $(".menu_cont .itemlist .item").eq($(this).index()).addClass("on");
+        });
 
-            $('#nav-icon3').click(function () {
-                $(this).toggleClass('open');
-                $('.menu_cont').slideToggle(600);
-                $('.span').toggleClass('on')
-                $('.search').toggleClass('on')
+        $(".sec1 .inner .text h4").mouseenter(function () {
+          $(this).css({
+            "background-color": "white",
+            border: "none",
+            color: "#333",
+            "font-weight": "bold",
+          });
+        });
+        $(".sec1 .inner .text h4").mouseleave(function () {
+          $(this).css({
+            "background-color": "#333",
+            border: "1px solid white",
+            color: "white",
+            "font-weight": "lighter",
+          });
+        });
+
+        $(".sec3 .inner .cont:nth-child(1) .list .item1 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr(
+              "src",
+              "img/denimitem.jpg"
+            );
+            $(".sec3 .inner .cont .figure2 img").attr(
+              "src",
+              "img/denimitem1.jpg"
+            );
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(1) .list .item1 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(1) .list .item2 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr(
+              "src",
+              "img/denimitem3.jpg"
+            );
+            $(".sec3 .inner .cont .figure2 img").attr(
+              "src",
+              "img/denimitem4.jpg"
+            );
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(1) .list .item2 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(1) .list .item3 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr(
+              "src",
+              "img/denimitem7.jpg"
+            );
+            $(".sec3 .inner .cont .figure2 img").attr(
+              "src",
+              "img/denimitem8.jpg"
+            );
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(1) .list .item3 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(2) .list .item1 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr(
+              "src",
+              "img/edition2.jpg"
+            );
+            $(".sec3 .inner .cont .figure2 img").attr(
+              "src",
+              "img/edition1.jpg"
+            );
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(2) .list .item1 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(2) .list .item2 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr(
+              "src",
+              "img/edition3.jpg"
+            );
+            $(".sec3 .inner .cont .figure2 img").attr(
+              "src",
+              "img/edition4.jpg"
+            );
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(2) .list .item2 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(2) .list .item3 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr(
+              "src",
+              "img/edition5.jpg"
+            );
+            $(".sec3 .inner .cont .figure2 img").attr(
+              "src",
+              "img/edition6.jpg"
+            );
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(2) .list .item3 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(3) .list .item1 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr("src", "img/dis3.jpg");
+            $(".sec3 .inner .cont .figure2 img").attr("src", "img/dis4.jpg");
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(3) .list .item1 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(3) .list .item2 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr("src", "img/dis1.jpg");
+            $(".sec3 .inner .cont .figure2 img").attr("src", "img/dis2.jpg");
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(3) .list .item2 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(3) .list .item3 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr("src", "img/dis5.jpg");
+            $(".sec3 .inner .cont .figure2 img").attr("src", "img/dis6.jpg");
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(3) .list .item3 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(4) .list .item1 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr("src", "img/kid1.jpg");
+            $(".sec3 .inner .cont .figure2 img").attr("src", "img/kid2.jpg");
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(4) .list .item1 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .inner .cont:nth-child(4) .list .item2 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr("src", "img/kid8.jpg");
+            $(".sec3 .inner .cont .figure2 img").attr("src", "img/kid4.jpg");
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(4) .list .item2 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(4) .list .item3 figure").mouseenter(
+          function () {
+            $(".sec3 contimg img").css({ display: "none" });
+            $(".figure").css({ display: "flex" });
+            $(".sec3 .inner .cont .figure1 img").attr("src", "img/kid7.jpg");
+            $(".sec3 .inner .cont .figure2 img").attr("src", "img/kid6.jpg");
+          }
+        );
+        $(".sec3 .inner .cont:nth-child(4) .list .item3 figure").mouseleave(
+          function () {
+            $(".sec3 contimg img").css({ display: "flex" });
+            $(".figure").css({ display: "none" });
+          }
+        );
+
+        $(".sec3 .menu li").click(function () {
+          $(".sec3 .menu li").removeClass("on");
+          $(this).addClass("on");
+          $(".sec3 .contlist .cont").removeClass("on");
+          $(".sec3 .contlist .cont").eq($(this).index()).addClass("on");
+        });
+
+        $(".sec5 .inner .select li").click(function () {
+          $(".sec5 .itemlist").removeClass("on");
+          $(".sec5 .itemlist").eq($(this).index()).addClass("on");
+          $(".sec5 .inner .select li").removeClass("on");
+          $(this).addClass("on");
+        });
+
+        $(".sec5 .girl .item:nth-child(1) img").mouseleave(function () {
+          $(this).attr("src", "img/yong8.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(1) img").mouseenter(function () {
+          $(this).attr("src", "img/yong8-2.jpg");
+        });
+
+        $(".sec5 .girl .item:nth-child(2) img").mouseleave(function () {
+          $(this).attr("src", "img/yong7.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(2) img").mouseenter(function () {
+          $(this).attr("src", "img/yong7-1.jpg");
+        });
+
+        $(".sec5 .girl .item:nth-child(3) img").mouseleave(function () {
+          $(this).attr("src", "img/yong3.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(3) img").mouseenter(function () {
+          $(this).attr("src", "img/yong3-1.jpg");
+        });
+
+        $(".sec5 .girl .item:nth-child(4) img").mouseleave(function () {
+          $(this).attr("src", "img/yong5.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(4) img").mouseenter(function () {
+          $(this).attr("src", "img/yong5-1.jpg");
+        });
+
+        $(".sec5 .girl .item:nth-child(5) img").mouseleave(function () {
+          $(this).attr("src", "img/back5.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(5) img").mouseenter(function () {
+          $(this).attr("src", "img/back5-1.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(6) img").mouseleave(function () {
+          $(this).attr("src", "img/back6.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(6) img").mouseenter(function () {
+          $(this).attr("src", "img/back6-1.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(7) img").mouseleave(function () {
+          $(this).attr("src", "img/yong9.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(7) img").mouseenter(function () {
+          $(this).attr("src", "img/yong9-1.jpg");
+        });
+
+        $(".sec5 .girl .item:nth-child(8) img").mouseenter(function () {
+          $(this).attr("src", "img/back1-1.jpg");
+        });
+        $(".sec5 .girl .item:nth-child(8) img").mouseleave(function () {
+          $(this).attr("src", "img/back1.jpg");
+        });
+
+        $(".sec5 .boys .item:nth-child(1) img").mouseleave(function () {
+          $(this).attr("src", "img/yong1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(1) img").mouseenter(function () {
+          $(this).attr("src", "img/yong1-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(2) img").mouseleave(function () {
+          $(this).attr("src", "img/yong4-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(2) img").mouseenter(function () {
+          $(this).attr("src", "img/yong4.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(3) img").mouseleave(function () {
+          $(this).attr("src", "img/yong6.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(3) img").mouseenter(function () {
+          $(this).attr("src", "img/yong6-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(4) img").mouseleave(function () {
+          $(this).attr("src", "img/yong11-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(4) img").mouseenter(function () {
+          $(this).attr("src", "img/yong11.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(5) img").mouseleave(function () {
+          $(this).attr("src", "img/boy1-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(5) img").mouseenter(function () {
+          $(this).attr("src", "img/boy1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(6) img").mouseleave(function () {
+          $(this).attr("src", "img/boy2-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(6) img").mouseenter(function () {
+          $(this).attr("src", "img/boy2.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(7) img").mouseleave(function () {
+          $(this).attr("src", "img/boy3-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(7) img").mouseenter(function () {
+          $(this).attr("src", "img/boy3.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(8) img").mouseleave(function () {
+          $(this).attr("src", "img/boy4-1.jpg");
+        });
+        $(".sec5 .boys .item:nth-child(8) img").mouseenter(function () {
+          $(this).attr("src", "img/boy4.jpg");
+        });
+
+        $(".sec6 .plus").mouseenter(function () {
+          $(this).attr("src", "img/icons8-plus-48 (1).png");
+        });
+        $(".sec6 .plus").mouseleave(function () {
+          $(this).attr("src", "img/icons8-plus-48.png");
+        });
+
+        let headerTop = $(".main_visual").offset().top;
+        let sec1Top = $(".sec1").offset().top;
+        console.log(sec1Top);
+
+        $(window).scroll(function () {
+          if (sec1Top < $(window).scrollTop()) {
+            $(".top").fadeIn().css({
+              display: "flex",
+              "background-color": "#333",
+              color: "white",
+              border: "1px solid white",
             });
+          } else {
+            $(".top").fadeOut();
+          }
+        });
 
-            $('.menu_cont .menu1 li').mouseenter(function () {
-                $('.menu_cont .item').removeClass('on')
-                $(this).css({
-                    'color': '#e01926',
-                    'font-size': '19px'
-                })
-
-
-
-            })
-            $('.menu_cont .menu1 li').mouseleave(function () {
-                $(this).css({
-                    'color': '#333333',
-                    'font-size': '18px'
-                })
-            })
-
-            $('.menu_cont .menu1 li').mouseenter(function () {
-                $('.menu_cont .itemlist .item').eq($(this).index()).addClass('on')
-            })
-
-            $('.sec1 .inner .text h4').mouseenter(function () {
-                $(this).css({
-                    'background-color': 'white',
-                    'border': 'none',
-                    'color': '#333',
-                    'font-weight': 'bold'
-
-                })
-            })
-            $('.sec1 .inner .text h4').mouseleave(function () {
-                $(this).css({
-                    'background-color': '#333',
-                    'border': '1px solid white',
-                    'color': 'white',
-                    'font-weight': 'lighter'
-                })
-            })
-
-            $('.sec3 .inner .cont:nth-child(1) .list .item1 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/denimitem.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/denimitem1.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(1) .list .item1 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-            })
-
-            $('.sec3 .inner .cont:nth-child(1) .list .item2 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/denimitem3.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/denimitem4.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(1) .list .item2 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-            $('.sec3 .inner .cont:nth-child(1) .list .item3 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/denimitem7.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/denimitem8.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(1) .list .item3 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-
-
-            $('.sec3 .inner .cont:nth-child(2) .list .item1 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/edition2.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/edition1.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(2) .list .item1 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-            })
-
-            $('.sec3 .inner .cont:nth-child(2) .list .item2 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/edition3.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/edition4.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(2) .list .item2 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-            $('.sec3 .inner .cont:nth-child(2) .list .item3 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/edition5.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/edition6.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(2) .list .item3 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-
-
-            $('.sec3 .inner .cont:nth-child(3) .list .item1 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/dis3.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/dis4.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(3) .list .item1 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-            })
-
-            $('.sec3 .inner .cont:nth-child(3) .list .item2 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/dis1.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/dis2.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(3) .list .item2 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-            $('.sec3 .inner .cont:nth-child(3) .list .item3 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/dis5.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/dis6.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(3) .list .item3 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-
-
-            $('.sec3 .inner .cont:nth-child(4) .list .item1 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/kid1.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/kid2.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(4) .list .item1 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-            })
-
-            $('.sec3 .inner .cont:nth-child(4) .list .item2 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/kid8.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/kid4.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(4) .list .item2 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-            $('.sec3 .inner .cont:nth-child(4) .list .item3 figure').mouseenter(function () {
-                $('.sec3 contimg img').css({ 'display': 'none' })
-                $('.figure').css({ 'display': 'flex' })
-                $('.sec3 .inner .cont .figure1 img').attr('src', 'img/kid7.jpg')
-                $('.sec3 .inner .cont .figure2 img').attr('src', 'img/kid6.jpg')
-            })
-            $('.sec3 .inner .cont:nth-child(4) .list .item3 figure').mouseleave(function () {
-                $('.sec3 contimg img').css({ 'display': 'flex' })
-                $('.figure').css({ 'display': 'none' })
-
-            })
-
-
-
-            $('.sec3 .menu li').click(function () {
-                $('.sec3 .menu li').removeClass('on')
-                $(this).addClass('on')
-                $('.sec3 .contlist .cont').removeClass('on')
-                $('.sec3 .contlist .cont').eq($(this).index()).addClass('on')
-            })
-
-            $('.sec5 .inner .select li').click(function () {
-                $('.sec5 .itemlist').removeClass('on')
-                $('.sec5 .itemlist').eq($(this).index()).addClass('on')
-                $('.sec5 .inner .select li').removeClass('on')
-                $(this).addClass('on')
-            })
-
-
-            $('.sec5 .girl .item:nth-child(1) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong8.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(1) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong8-2.jpg')
-
-            })
-
-            $('.sec5 .girl .item:nth-child(2) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong7.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(2) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong7-1.jpg')
-            })
-
-            $('.sec5 .girl .item:nth-child(3) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong3.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(3) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong3-1.jpg')
-            })
-
-            $('.sec5 .girl .item:nth-child(4) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong5.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(4) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong5-1.jpg')
-            })
-
-            $('.sec5 .girl .item:nth-child(5) img').mouseleave(function () {
-                $(this).attr('src', 'img/back5.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(5) img').mouseenter(function () {
-                $(this).attr('src', 'img/back5-1.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(6) img').mouseleave(function () {
-                $(this).attr('src', 'img/back6.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(6) img').mouseenter(function () {
-                $(this).attr('src', 'img/back6-1.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(7) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong9.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(7) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong9-1.jpg')
-            })
-
-            $('.sec5 .girl .item:nth-child(8) img').mouseenter(function () {
-                $(this).attr('src', 'img/back1-1.jpg')
-            })
-            $('.sec5 .girl .item:nth-child(8) img').mouseleave(function () {
-                $(this).attr('src', 'img/back1.jpg')
-            })
-
-
-
-            $('.sec5 .boys .item:nth-child(1) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(1) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong1-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(2) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong4-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(2) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong4.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(3) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong6.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(3) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong6-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(4) img').mouseleave(function () {
-                $(this).attr('src', 'img/yong11-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(4) img').mouseenter(function () {
-                $(this).attr('src', 'img/yong11.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(5) img').mouseleave(function () {
-                $(this).attr('src', 'img/boy1-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(5) img').mouseenter(function () {
-                $(this).attr('src', 'img/boy1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(6) img').mouseleave(function () {
-                $(this).attr('src', 'img/boy2-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(6) img').mouseenter(function () {
-                $(this).attr('src', 'img/boy2.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(7) img').mouseleave(function () {
-                $(this).attr('src', 'img/boy3-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(7) img').mouseenter(function () {
-                $(this).attr('src', 'img/boy3.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(8) img').mouseleave(function () {
-                $(this).attr('src', 'img/boy4-1.jpg')
-            })
-            $('.sec5 .boys .item:nth-child(8) img').mouseenter(function () {
-                $(this).attr('src', 'img/boy4.jpg')
-            })
-
-            $('.sec6 .plus').mouseenter(function () {
-                $(this).attr('src', 'img/icons8-plus-48 (1).png')
-            })
-            $('.sec6 .plus').mouseleave(function () {
-                $(this).attr('src', 'img/icons8-plus-48.png')
-            })
-
-            let headerTop = $('.main_visual').offset().top;
-            let sec1Top = $('.sec1').offset().top;
-            console.log(sec1Top)
-
-            $(window).scroll(function () {
-
-                if (sec1Top < $(window).scrollTop()) {
-                    $('.top').fadeIn().css({
-                        'display': 'flex',
-                        'background-color': '#333',
-                        'color': 'white',
-                        'border': '1px solid white'
-                    })
-
-                } else {
-                    $('.top').fadeOut();
-                }
-            })
-
-
-            $('.top').click(function () {
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 1000)
-            })//.top.click end
-
-
-
-        });//jquery end
+        $(".top").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: 0,
+            },
+            1000
+          );
+        }); //.top.click end
+      }); //jquery end
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrap">
-        <div class="main_visual">
-            <div class="login_page">
-                <div class="cont">
-                    <div class="inner">
-                        <div class="log">
-                            <h1>로그인</h1>
-                            <img class="xicon" src="img/icons8-취소-50 (2).png" alt="닫기">
-                        </div>
-
-                        <p>다양한 할인 혜택과 이벤트, 보너스 쿠폰을 놓치지 마세요</p>
-                        <div class="kakao">
-                            <img src="img/icons8-말풍선-30.png" alt="말풍선">
-                            <p>카카오로 로그인</p>
-                        </div><!-- kakao end -->
-                        <div class="line">
-                            <div class="fir"><span>tjs</span></div>
-                            <p>또는</p>
-                            <div class="sec"><span>tjs</span></div>
-                        </div><!-- line end -->
-                        <h4>이메일</h4>
-                        <input type="text" placeholder="이메일을 입력하세요.">
-                        <h4>비밀번호</h4>
-                        <input type="text" placeholder="비밀번호를 입력하세요.">
-
-                        <div class="check">
-                            <div>
-                                <input type="checkbox" name="check" id="check">
-                                <label for="check">로그인 상태 유지</label>
-                            </div>
-                            <p>비밀번호를 잊으셨나요?</p>
-                        </div><!-- check end -->
-
-                        <div class="btn1">로그인</div>
-                        <div class="btn2">회원가입하기</div>
-                        <p class="info">멤버십 정보</p>
-                    </div><!-- inner end -->
-                </div><!-- cont end -->
-            </div><!-- login_page end -->
-
-
-            <div class="span"><span>a</span></div>
-
-            <video autoplay muted loop>
-                <source src="img/videoplayback.mp4" type="video/mp4">
-
-            </video>
-            <div class="menu_cont">
-                <div class="inner">
-                    <div class="search">
-                        <input type="text" placeholder="h&m신상">
-                        <button><img src="img/icons8-수색-50 (5).png" alt="">
-                        </button>
-                    </div><!-- search end -->
-                    <ul class="menu1">
-                        <li>여성</li>
-                        <li>남성</li>
-                        <li>신생아/유아</li>
-                        <li>아동</li>
-                        <li>H&M HOME</li>
-                        <li>스포츠</li>
-                        <li>SALE</li>
-                        <li>지속가능성</li>
-                    </ul><!-- menu1 end -->
-
-                    <div class="itemlist">
-                        <div class="item on">
-                            <ul class="women">
-                                <li><a href="#">TRENDING NOW</a></li>
-                                <li><a href="#">NEW</a></li>
-                                <li><a href="#">BEST</a></li>
-                                <li><a href="#">CLOTHING</a></li>
-                                <li><a href="#">BAG</a></li>
-                                <li><a href="#">SHOES</a></li>
-                                <li><a href="#">ACC</a></li>
-                            </ul><!-- women -->
-
-                            <div class="img">
-                                <figure>
-                                    <img src="img/now6.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/homeitem2.jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img1 end -->
-                        </div>
-
-                        <div class="item">
-                            <ul class="men">
-                                <li><a href="#">TRENDING NOW</a></li>
-                                <li><a href="#">NEW</a></li>
-                                <li><a href="#">BEST</a></li>
-                                <li><a href="#">CLOTHING</a></li>
-                                <li><a href="#">BAG</a></li>
-                                <li><a href="#">SHOES</a></li>
-                                <li><a href="#">ACC</a></li>
-                            </ul><!-- women -->
-                            <div class="img">
-                                <figure>
-                                    <img src="img/men3.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/men5-1.jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img1 end -->
-                        </div>
-
-                        <div class="item">
-                            <ul class="baby">
-                                <li><a href="#">멀티팩 세트</a></li>
-                                <li><a href="#">바디수트</a></li>
-                                <li><a href="#">캐릭터제품</a></li>
-                                <li><a href="#">NEW</a></li>
-                                <li><a href="#">BEST</a></li>
-                                <li><a href="#">여아</a></li>
-                                <li><a href="#">남아</a></li>
-                            </ul><!-- baby end -->
-
-                            <div class="img">
-                                <figure>
-                                    <img src="img/baby1.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/baby9.jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img1 end -->
-                        </div><!-- item end -->
-                        <div class="item">
-                            <ul class="kids">
-                                <li><a href="#">신학기준비</a></li>
-                                <li><a href="#">NEW</a></li>
-                                <li><a href="#">BEST</a></li>
-                                <li><a href="#">여아 2-8세</a></li>
-                                <li><a href="#">남아 2-8세</a></li>
-                                <li><a href="#">여아 9-14세</a></li>
-                                <li><a href="#">남아 9-14세</a></li>
-                            </ul><!-- kids end -->
-
-                            <div class="img">
-                                <figure>
-                                    <img src="img/yong8-1.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/back2-1.jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img1 end -->
-                        </div><!-- item end -->
-
-                        <div class="item">
-                            <ul class="H&M HOME">
-                                <li><a href="#">TRENDING NOW</a></li>
-                                <li><a href="#">NEW</a></li>
-                                <li><a href="#">SPECIAL</a></li>
-                                <li><a href="#">KITCHEN</a></li>
-                                <li><a href="#">HOME</a></li>
-                                <li><a href="#">INTERIOR</a></li>
-                            </ul><!-- H&M HOME end -->
-                            <div class="img">
-                                <figure>
-                                    <img src="img/hmgoepprod (10).jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/hmgoepprod (3).jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img end -->
-                        </div><!-- item end -->
-
-                        <div class="item">
-                            <ul class="sport">
-                                <li><a href="#">여성</a></li>
-                                <li><a href="#">남성</a></li>
-                                <li><a href="#">아동</a></li>
-                            </ul><!-- sport end -->
-                            <div class="img">
-                                <figure>
-                                    <img src="img/sport3.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/sport10.jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img end -->
-                        </div><!-- item end -->
-
-                        <div class="item">
-                            <ul class="sale">
-                                <li><a href="#">SALE</a></li>
-                            </ul>
-                            <div class="img">
-                                <figure>
-                                    <img src="img/sale2.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/sale.jpg" alt="상품">
-                                </figure>
-                                <figure>
-                                    <img src="img/sale5.jpg" alt="상품">
-                                </figure>
-                            </div> <!-- img end -->
-                        </div><!-- item end -->
-
-                        <div class="item">
-                            <ul class="keyi">
-                                <li><a href="#">H&M이 하는 일</a></li>
-                                <li><a href="#">H&M Take Care</a></li>
-                                <li><a href="#">H&M의 약속</a></li>
-                            </ul><!-- keyi -->
-                            <div class="img">
-                                <figure>
-                                    <img src="img/hmgoepprod (7).jpg" alt="이미지">
-                                </figure>
-                                <figure>
-                                    <img src="img/hmgoepprod (4).jpg" alt="이미지">
-                                </figure>
-                            </div> <!-- img end -->
-                        </div><!-- item end -->
-
-                    </div><!-- itemlist end -->
-
-                </div><!-- inner end -->
-            </div><!-- menu_cont end -->
-
-
+      <div class="main_visual">
+        <div class="login_page">
+          <div class="cont">
             <div class="inner">
-                <div class="header">
-                    <h1><a href="#"><img src="img/1x/Asset 1.png" alt="logo"></a></h1>
-                    <div class="login">
-                        <div class="loginlist">
-                            <a class="loginbtn" href="#">login</a>
-                            <a href="#">favorite</a>
-                            <a href="#">shopping bag</a>
-                        </div>
-                        <div id="nav-icon3">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div><!-- login end -->
-                </div><!-- header end -->
-            </div><!-- inner end -->
-        </div><!-- main_visual end -->
+              <div class="log">
+                <h1>로그인</h1>
+                <img
+                  class="xicon"
+                  src="img/icons8-취소-50 (2).png"
+                  alt="닫기"
+                />
+              </div>
 
-        <section class="sec1">
-            <div class="inner">
-                <div class="list">
-                    <div class="item text">
-                        <h1>NEW IN</h1>
-                        <h1>1,845</h1>
-                        <P>Our latest Arrivals</P>
-                        <h4>SHOP NOW</h4>
-                    </div><!-- item end -->
+              <p>다양한 할인 혜택과 이벤트, 보너스 쿠폰을 놓치지 마세요</p>
+              <div class="kakao">
+                <img src="img/icons8-말풍선-30.png" alt="말풍선" />
+                <p>카카오로 로그인</p>
+              </div>
+              <!-- kakao end -->
+              <div class="line">
+                <div class="fir"><span>tjs</span></div>
+                <p>또는</p>
+                <div class="sec"><span>tjs</span></div>
+              </div>
+              <!-- line end -->
+              <h4>이메일</h4>
+              <input type="text" placeholder="이메일을 입력하세요." />
+              <h4>비밀번호</h4>
+              <input type="text" placeholder="비밀번호를 입력하세요." />
 
-                    <div class="item img">
-                        <figure>
-                            <img src="img/women.jpg" alt="women">
-                        </figure>
-                        <h4>women</h4>
-                    </div><!-- Item end -->
-                    <div class="item img">
-                        <figure>
-                            <img src="img/men.jpg" alt="women">
-                        </figure>
-                        <h4>men</h4>
-                    </div><!-- Item end -->
-                    <div class="item img">
-                        <figure>
-                            <img src="img/baby.jpg" alt="baby">
-                        </figure>
-                        <h4>baby</h4>
-                    </div><!-- Item end -->
-                    <div class="item img">
-                        <figure>
-                            <img src="img/yong2.jpg" alt="women">
-                        </figure>
-                        <h4>kids</h4>
-                    </div><!-- Item end -->
-                    <div class="item img">
-                        <figure>
-                            <img src="img/sport.jpg" alt="women">
-                        </figure>
-                        <h4>sport</h4>
-                    </div><!-- Item end -->
-                    <div class="item img">
-                        <figure>
-                            <img src="img/homei.jpg" alt="women">
-                        </figure>
-                        <h4><Span>H&M</Span> home</h4>
-                    </div><!-- Item end -->
-                </div><!-- list end -->
-            </div><!-- inner end -->
-        </section><!-- sec1 end -->
+              <div class="check">
+                <div>
+                  <input type="checkbox" name="check" id="check" />
+                  <label for="check">로그인 상태 유지</label>
+                </div>
+                <p>비밀번호를 잊으셨나요?</p>
+              </div>
+              <!-- check end -->
 
-        <section class="sec2">
-            <div class="inner">
-                <h2>TRANDING NOW</h2><!-- width 360px he 794 -->
-                <div class="box">
-                    <div class="left">
-                        <div class="item item1">
-                            <figure>
-                                <img src="img/now2.jpg" alt="상품">
-                            </figure>
-                            <div class="textlist">
-                                <div class="text">
-                                    <h4>오버사이즈 재킷</h4>
-                                    <p>노치트 라펠이 있는 싱글 브레스티드 재킷</p>
-                                    <strong>₩ 59,900</strong>
-                                </div><!-- text end -->
-                            </div><!-- item -->
-                        </div><!-- item end -->
-                    </div><!-- left end -->
-                    <div class="right">
-                        <div class="item item2">
-                            <figure>
-                                <img src="img/now7.jpg" alt="상품">
-                            </figure>
-                            <div class="textlist">
-                                <div class="text">
-                                    <h4>골드 플레이티드 링 2피스 세트</h4>
-                                    <p>서로 다른 디자인의 도금처리된 금속 반지 세트</p>
-                                    <strong>₩ 34,900</strong>
-                                </div><!-- text end -->
-                            </div><!-- textlist end -->
-                        </div><!-- item -->
-                        <div class="item item3">
-                            <figure>
-                                <span>이미지</span>
-                            </figure>
-                            <div class="textlist">
-                                <div class="text">
-                                    <h4>더블 브레스티드 재킷</h4>
-                                    <p>피크트 라펠이 있는 더블 브레스티드 재킷</p>
-                                    <strong>₩ 49,900</strong>
-                                </div>
-                            </div>
-                        </div><!-- item -->
-                    </div><!-- right end -->
-                    <div class="left">
-                        <div class="item item4">
-                            <figure>
-                                <span>dlalwl</span>
-                            </figure>
-                            <div class="textlist">
-                                <div class="text">
-                                    <h4>싱글 브레스티드 재킷</h4>
-                                    <p>울을 함유한 우븐 소재의 싱글 브레스티드 재킷</p>
-                                    <strong>₩ 79,900</strong>
-                                </div>
-                            </div>
-                        </div><!-- item -->
-                    </div><!-- left end -->
-                    <div class="right">
-                        <div class="item item5">
-                            <figure>
-                                <span>dlalwl</span>
-                            </figure>
-                            <div class="textlist">
-                                <div class="text">
-                                    <h4>새틴셔츠</h4>
-                                    <p>새틴 소재 깔끔한 스타일의 셔츠</p>
-                                    <strong>₩ 29,900</strong>
-                                </div>
-                            </div>
-                        </div><!-- item -->
-                        <div class="item item6">
-                            <figure>
-                                <span>dlalwl</span>
-                            </figure>
-                            <div class="textlist">
-                                <div class="text">
-                                    <h4>플랫슈즈</h4>
-                                    <p>앞부분에 리본 장식이 있는 플랫 슈즈</p>
-                                    <strong>₩ 19,900</strong>
-                                </div>
-                            </div>
-                        </div><!-- item -->
-                    </div><!-- right end -->
-                </div><!-- box end -->
-            </div><!-- inner end -->
-        </section><!-- sec2 end -->
+              <div class="btn1">로그인</div>
+              <div class="btn2">회원가입하기</div>
+              <p class="info">멤버십 정보</p>
+            </div>
+            <!-- inner end -->
+          </div>
+          <!-- cont end -->
+        </div>
+        <!-- login_page end -->
 
-        <section class="sec3">
-            <div class="inner">
-                <div class="title">
-                    <h1>STYLE KEYWORD</h1>
-                    <ul class="menu">
-                        <li class="on">NEW SEASON EDIT</li>
-                        <li>H&M EDITION</li>
-                        <li>DISNEY 100 x H&M</li>
-                        <li>CLASSIC COLLECTION</li>
-                    </ul>
-                </div><!-- title end -->
-                <div class="contlist">
-                    <div class="cont on cont1">
-                        <figure class="contimg">
-                            <img src="img/denim3.jpg" alt="배경">
-                            <div class="figure">
-                                <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="상품">
-                                </figure>
-                                <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="상품">
-                                </figure>
-                            </div>
-                        </figure>
-                        <div class="list">
-                            <div class="item item1">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>와이드<br> 하이웨스트 진</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                            <div class="item item2">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>쇼트<br> 데님 재킷</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                            <div class="item item3">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>크로커다일 <br>펌프스</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                        </div><!-- list end -->
-                    </div><!-- cont end -->
+        <div class="span"><span>a</span></div>
 
+        <video autoplay muted loop>
+          <source src="img/videoplayback.mp4" type="video/mp4" />
+        </video>
+        <div class="menu_cont">
+          <div class="inner">
+            <div class="search">
+              <input type="text" placeholder="h&m신상" />
+              <button>
+                <img src="img/icons8-수색-50 (5).png" alt="돋보기 아이콘" />
+              </button>
+            </div>
+            <!-- search end -->
+            <ul class="menu1">
+              <li>여성</li>
+              <li>남성</li>
+              <li>신생아/유아</li>
+              <li>아동</li>
+              <li>H&M HOME</li>
+              <li>스포츠</li>
+              <li>SALE</li>
+              <li>지속가능성</li>
+            </ul>
+            <!-- menu1 end -->
 
-                    <div class="cont cont2">
-                        <figure class="contimg">
-                            <img src="img/edd.jpg" alt="배경">
-                            <div class="figure">
-                                <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="상품">
-                                </figure>
-                                <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="상품">
-                                </figure>
-                            </div>
-                        </figure>
-                        <div class="list">
-                            <div class="item item1">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>파인니트 울 스웨터</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                            <div class="item item2">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>리브니트탑</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                            <div class="item item3">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>리넨 블렌드<br> 트윌 팬츠</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                        </div><!-- list end -->
-                    </div><!-- cont end -->
+            <div class="itemlist">
+              <div class="item on">
+                <ul class="women">
+                  <li><a href="#">TRENDING NOW</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">BEST</a></li>
+                  <li><a href="#">CLOTHING</a></li>
+                  <li><a href="#">BAG</a></li>
+                  <li><a href="#">SHOES</a></li>
+                  <li><a href="#">ACC</a></li>
+                </ul>
+                <!-- women -->
 
-
-                    <div class="cont">
-                        <figure class="contimg">
-                            <img src="img/disney(1).jpg" alt="배경">
-                            <div class="figure">
-                                <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="상품">
-                                </figure>
-                                <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="상품">
-                                </figure>
-                            </div>
-                        </figure>
-                        <div class="list">
-                            <div class="item item1">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>루즈핏 프린트<br> 데님 재킷</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                            <div class="item item2">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>Loose Fit <br>티셔츠</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                            <div class="item item3">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>Loose Fit <br>스웨트셔츠</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                        </div><!-- list end -->
-                    </div><!-- cont end -->
-
-
-                    <div class="cont">
-                        <figure class="contimg">
-                            <img src="img/junko-nakase-Q-72wa9-7Dg-unsplash.jpg" alt="배경">
-                            <div class="figure">
-                                <figure class="figure1">
-                                    <img src="img/denimitem.jpg" alt="상품">
-                                </figure>
-                                <figure class="figure2">
-                                    <img src="img/denimitem1.jpg" alt="상품">
-                                </figure>
-                            </div>
-                        </figure>
-                        <div class="list">
-
-                            <div class="item item1">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>스트라이프<br>티셔츠</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-
-                            <div class="item item2">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>아동복 3종세트</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-
-                            <div class="item item3">
-                                <figure>
-                                    <span>epsla</span>
-                                </figure>
-                                <div class="text">
-                                    <p>칼라 블라우스</p>
-                                </div><!-- text end -->
-                            </div><!-- item end -->
-                        </div><!-- list end -->
-                    </div><!-- cont end -->
-                </div><!-- contlist end -->
-            </div><!-- inner end -->
-        </section><!-- sec3 end -->
-
-        <section class="sec4">
-            <div class="banner">
-                <img src="img/Rectangle 1.png" alt="배경">
                 <div class="img">
+                  <figure>
+                    <img src="img/now6.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/homeitem2.jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img1 end -->
+              </div>
+
+              <div class="item">
+                <ul class="men">
+                  <li><a href="#">TRENDING NOW</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">BEST</a></li>
+                  <li><a href="#">CLOTHING</a></li>
+                  <li><a href="#">BAG</a></li>
+                  <li><a href="#">SHOES</a></li>
+                  <li><a href="#">ACC</a></li>
+                </ul>
+                <!-- women -->
+                <div class="img">
+                  <figure>
+                    <img src="img/men3.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/men5-1.jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img1 end -->
+              </div>
+
+              <div class="item">
+                <ul class="baby">
+                  <li><a href="#">멀티팩 세트</a></li>
+                  <li><a href="#">바디수트</a></li>
+                  <li><a href="#">캐릭터제품</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">BEST</a></li>
+                  <li><a href="#">여아</a></li>
+                  <li><a href="#">남아</a></li>
+                </ul>
+                <!-- baby end -->
+
+                <div class="img">
+                  <figure>
+                    <img src="img/baby1.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/baby9.jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img1 end -->
+              </div>
+              <!-- item end -->
+              <div class="item">
+                <ul class="kids">
+                  <li><a href="#">신학기준비</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">BEST</a></li>
+                  <li><a href="#">여아 2-8세</a></li>
+                  <li><a href="#">남아 2-8세</a></li>
+                  <li><a href="#">여아 9-14세</a></li>
+                  <li><a href="#">남아 9-14세</a></li>
+                </ul>
+                <!-- kids end -->
+
+                <div class="img">
+                  <figure>
+                    <img src="img/yong8-1.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/back2-1.jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img1 end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <ul class="H&M HOME">
+                  <li><a href="#">TRENDING NOW</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">SPECIAL</a></li>
+                  <li><a href="#">KITCHEN</a></li>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">INTERIOR</a></li>
+                </ul>
+                <!-- H&M HOME end -->
+                <div class="img">
+                  <figure>
+                    <img src="img/hmgoepprod (10).jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/hmgoepprod (3).jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <ul class="sport">
+                  <li><a href="#">여성</a></li>
+                  <li><a href="#">남성</a></li>
+                  <li><a href="#">아동</a></li>
+                </ul>
+                <!-- sport end -->
+                <div class="img">
+                  <figure>
+                    <img src="img/sport3.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/sport10.jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <ul class="sale">
+                  <li><a href="#">SALE</a></li>
+                </ul>
+                <div class="img">
+                  <figure>
+                    <img src="img/sale2.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/sale.jpg" alt="상품" />
+                  </figure>
+                  <figure>
+                    <img src="img/sale5.jpg" alt="상품" />
+                  </figure>
+                </div>
+                <!-- img end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <ul class="keyi">
+                  <li><a href="#">H&M이 하는 일</a></li>
+                  <li><a href="#">H&M Take Care</a></li>
+                  <li><a href="#">H&M의 약속</a></li>
+                </ul>
+                <!-- keyi -->
+                <div class="img">
+                  <figure>
+                    <img src="img/hmgoepprod (7).jpg" alt="이미지" />
+                  </figure>
+                  <figure>
+                    <img src="img/hmgoepprod (4).jpg" alt="이미지" />
+                  </figure>
+                </div>
+                <!-- img end -->
+              </div>
+              <!-- item end -->
+            </div>
+            <!-- itemlist end -->
+          </div>
+          <!-- inner end -->
+        </div>
+        <!-- menu_cont end -->
+
+        <div class="inner">
+          <div class="header">
+            <h1>
+              <a href="#"><img src="img/1x/Asset 1.png" alt="logo" /></a>
+            </h1>
+            <div class="login">
+              <div class="loginlist">
+                <a class="loginbtn" href="#">login</a>
+                <a href="#">favorite</a>
+                <a href="#">shopping bag</a>
+              </div>
+              <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <!-- login end -->
+          </div>
+          <!-- header end -->
+        </div>
+        <!-- inner end -->
+      </div>
+      <!-- main_visual end -->
+
+      <section class="sec1">
+        <div class="inner">
+          <div class="list">
+            <div class="item text">
+              <h1>NEW IN</h1>
+              <h1>1,845</h1>
+              <p>Our latest Arrivals</p>
+              <h4>SHOP NOW</h4>
+            </div>
+            <!-- item end -->
+
+            <div class="item img">
+              <figure>
+                <img src="img/women.jpg" alt="women" />
+              </figure>
+              <h4>women</h4>
+            </div>
+            <!-- Item end -->
+            <div class="item img">
+              <figure>
+                <img src="img/men.jpg" alt="women" />
+              </figure>
+              <h4>men</h4>
+            </div>
+            <!-- Item end -->
+            <div class="item img">
+              <figure>
+                <img src="img/baby.jpg" alt="baby" />
+              </figure>
+              <h4>baby</h4>
+            </div>
+            <!-- Item end -->
+            <div class="item img">
+              <figure>
+                <img src="img/yong2.jpg" alt="women" />
+              </figure>
+              <h4>kids</h4>
+            </div>
+            <!-- Item end -->
+            <div class="item img">
+              <figure>
+                <img src="img/sport.jpg" alt="women" />
+              </figure>
+              <h4>sport</h4>
+            </div>
+            <!-- Item end -->
+            <div class="item img">
+              <figure>
+                <img src="img/homei.jpg" alt="women" />
+              </figure>
+              <h4><span>H&M</span> home</h4>
+            </div>
+            <!-- Item end -->
+          </div>
+          <!-- list end -->
+        </div>
+        <!-- inner end -->
+      </section>
+      <!-- sec1 end -->
+
+      <section class="sec2">
+        <div class="inner">
+          <h2>TRANDING NOW</h2>
+          <!-- width 360px he 794 -->
+          <div class="box">
+            <div class="left">
+              <div class="item item1">
+                <figure>
+                  <img src="img/now2.jpg" alt="상품" />
+                </figure>
+                <div class="textlist">
+                  <div class="text">
+                    <h4>오버사이즈 재킷</h4>
+                    <p>노치트 라펠이 있는 싱글 브레스티드 재킷</p>
+                    <strong>₩ 59,900</strong>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item -->
+              </div>
+              <!-- item end -->
+            </div>
+            <!-- left end -->
+            <div class="right">
+              <div class="item item2">
+                <figure>
+                  <img src="img/now7.jpg" alt="상품" />
+                </figure>
+                <div class="textlist">
+                  <div class="text">
+                    <h4>골드 플레이티드 링 2피스 세트</h4>
+                    <p>서로 다른 디자인의 도금처리된 금속 반지 세트</p>
+                    <strong>₩ 34,900</strong>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- textlist end -->
+              </div>
+              <!-- item -->
+              <div class="item item3">
+                <figure>
+                  <span>이미지</span>
+                </figure>
+                <div class="textlist">
+                  <div class="text">
+                    <h4>더블 브레스티드 재킷</h4>
+                    <p>피크트 라펠이 있는 더블 브레스티드 재킷</p>
+                    <strong>₩ 49,900</strong>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+            </div>
+            <!-- right end -->
+            <div class="left">
+              <div class="item item4">
+                <figure>
+                  <span>dlalwl</span>
+                </figure>
+                <div class="textlist">
+                  <div class="text">
+                    <h4>싱글 브레스티드 재킷</h4>
+                    <p>울을 함유한 우븐 소재의 싱글 브레스티드 재킷</p>
+                    <strong>₩ 79,900</strong>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+            </div>
+            <!-- left end -->
+            <div class="right">
+              <div class="item item5">
+                <figure>
+                  <span>dlalwl</span>
+                </figure>
+                <div class="textlist">
+                  <div class="text">
+                    <h4>새틴셔츠</h4>
+                    <p>새틴 소재 깔끔한 스타일의 셔츠</p>
+                    <strong>₩ 29,900</strong>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="item item6">
+                <figure>
+                  <span>dlalwl</span>
+                </figure>
+                <div class="textlist">
+                  <div class="text">
+                    <h4>플랫슈즈</h4>
+                    <p>앞부분에 리본 장식이 있는 플랫 슈즈</p>
+                    <strong>₩ 19,900</strong>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+            </div>
+            <!-- right end -->
+          </div>
+          <!-- box end -->
+        </div>
+        <!-- inner end -->
+      </section>
+      <!-- sec2 end -->
+
+      <section class="sec3">
+        <div class="inner">
+          <div class="title">
+            <h1>STYLE KEYWORD</h1>
+            <ul class="menu">
+              <li class="on">NEW SEASON EDIT</li>
+              <li>H&M EDITION</li>
+              <li>DISNEY 100 x H&M</li>
+              <li>CLASSIC COLLECTION</li>
+            </ul>
+          </div>
+          <!-- title end -->
+          <div class="contlist">
+            <div class="cont on cont1">
+              <figure class="contimg">
+                <img src="img/denim3.jpg" alt="배경" />
+                <div class="figure">
+                  <figure class="figure1">
+                    <img src="img/denimitem.jpg" alt="상품" />
+                  </figure>
+                  <figure class="figure2">
+                    <img src="img/denimitem1.jpg" alt="상품" />
+                  </figure>
+                </div>
+              </figure>
+              <div class="list">
+                <div class="item item1">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      와이드<br />
+                      하이웨스트 진
+                    </p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item item2">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      쇼트<br />
+                      데님 재킷
+                    </p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item item3">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>크로커다일 <br />펌프스</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- list end -->
+            </div>
+            <!-- cont end -->
+
+            <div class="cont cont2">
+              <figure class="contimg">
+                <img src="img/edd.jpg" alt="배경" />
+                <div class="figure">
+                  <figure class="figure1">
+                    <img src="img/denimitem.jpg" alt="상품" />
+                  </figure>
+                  <figure class="figure2">
+                    <img src="img/denimitem1.jpg" alt="상품" />
+                  </figure>
+                </div>
+              </figure>
+              <div class="list">
+                <div class="item item1">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>파인니트 울 스웨터</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item item2">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>리브니트탑</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item item3">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      리넨 블렌드<br />
+                      트윌 팬츠
+                    </p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- list end -->
+            </div>
+            <!-- cont end -->
+
+            <div class="cont">
+              <figure class="contimg">
+                <img src="img/disney(1).jpg" alt="배경" />
+                <div class="figure">
+                  <figure class="figure1">
+                    <img src="img/denimitem.jpg" alt="상품" />
+                  </figure>
+                  <figure class="figure2">
+                    <img src="img/denimitem1.jpg" alt="상품" />
+                  </figure>
+                </div>
+              </figure>
+              <div class="list">
+                <div class="item item1">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      루즈핏 프린트<br />
+                      데님 재킷
+                    </p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item item2">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>Loose Fit <br />티셔츠</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item item3">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>Loose Fit <br />스웨트셔츠</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- list end -->
+            </div>
+            <!-- cont end -->
+
+            <div class="cont">
+              <figure class="contimg">
+                <img
+                  src="img/junko-nakase-Q-72wa9-7Dg-unsplash.jpg"
+                  alt="배경"
+                />
+                <div class="figure">
+                  <figure class="figure1">
+                    <img src="img/denimitem.jpg" alt="상품" />
+                  </figure>
+                  <figure class="figure2">
+                    <img src="img/denimitem1.jpg" alt="상품" />
+                  </figure>
+                </div>
+              </figure>
+              <div class="list">
+                <div class="item item1">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>스트라이프<br />티셔츠</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+
+                <div class="item item2">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>아동복 3종세트</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+
+                <div class="item item3">
+                  <figure>
+                    <span>epsla</span>
+                  </figure>
+                  <div class="text">
+                    <p>칼라 블라우스</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- list end -->
+            </div>
+            <!-- cont end -->
+          </div>
+          <!-- contlist end -->
+        </div>
+        <!-- inner end -->
+      </section>
+      <!-- sec3 end -->
+
+      <section class="sec4">
+        <div class="banner">
+          <img src="img/Rectangle 1.png" alt="배경" />
+          <div class="img">
+            <figure>
+              <span>img</span>
+            </figure>
+          </div>
+          <h1>WEEKLY<br />BEST ESLLER</h1>
+          <div class="btn">shop now</div>
+        </div>
+        <!-- banner end -->
+      </section>
+      <!-- sec4 end -->
+
+      <section class="sec5">
+        <div class="inner">
+          <h1>Back To School</h1>
+          <p>Make an entrance in stylish back-to-school fashion</p>
+          <div class="menu">
+            <ul class="select">
+              <li class="on">Girls</li>
+              <li>Boys</li>
+            </ul>
+            <!-- select end-->
+            <p>VIEW MORE</p>
+          </div>
+          <!-- menu end -->
+
+          <div class="swiper mySwiper list">
+            <div class="swiper-wrapper girl on itemlist">
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong8.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>퍼프 슬리브 드레스</p>
+                  <h4>₩ 39,900</h4>
+                </div>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong7.jpg" alt="상품" />
+                </figure>
+                <p>데님 오버롤 팬츠</p>
+                <h4>₩39,900</h4>
+              </div>
+              <!-- item end -->
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong3.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>리브드 저지 드레스</p>
+                  <h4>₩ 39,900</h4>
+                </div>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong5.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>리본 디테일 스트랩 탑</p>
+                  <h4>₩ 39,900</h4>
+                </div>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/back5.jpg" alt="상품" />
+                </figure>
+                <p>스트라이프 니트</p>
+                <h4>₩ 29,900</h4>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/back6.jpg" alt="상품" />
+                </figure>
+                <p>블랙원피스</p>
+                <h4>₩ 39,900</h4>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong9.jpg" alt="상품" />
+                </figure>
+                <p>리본 맨투맨</p>
+                <h4>₩ 24,900</h4>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/back1.jpg" alt="상품" />
+                </figure>
+                <p>스트라이프 티셔츠</p>
+                <h4>₩ 19,900</h4>
+              </div>
+              <!-- item end -->
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+
+          <div class="swiper mySwiper list">
+            <div class="swiper-wrapper boys itemlist">
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong1.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>헨리탑 2피스 세트</p>
+                  <h4>₩ 19,900</h4>
+                </div>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong4-1.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>오버사이즈 셔츠</p>
+                  <h4>₩ 24,900</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong6.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>코튼 셔츠 & 넥타이</p>
+                  <h4>₩ 24,900</h4>
+                </div>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/yong11-1.jpg" alt="상품" />
+                </figure>
+                <div class="text">
+                  <p>오버사이즈 스웨트셔츠</p>
+                  <h4>₩ 19,900</h4>
+                </div>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/boy1-1.jpg" alt="상품" />
+                </figure>
+                <p>프린트 코튼 티셔츠</p>
+                <h4>₩ 7,900</h4>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/boy2-1.jpg" alt="상품" />
+                </figure>
+                <p>Zip-top sweatshirt</p>
+                <h4>₩ 34,900</h4>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/boy3-1.jpg" alt="상품" />
+                </figure>
+                <p>Zip-through hoodie</p>
+                <h4>₩ 24,900</h4>
+              </div>
+              <!-- item end -->
+
+              <div class="swiper-slide item">
+                <figure>
+                  <img src="img/boy4-1.jpg" alt="상품" />
+                </figure>
+                <p>립스탑 파우치 쇼츠</p>
+                <h4>₩ 29,900</h4>
+              </div>
+              <!-- item end -->
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+        <!-- inner end -->
+      </section>
+      <!-- sec5 end -->
+
+      <section class="sec6">
+        <div class="inner">
+          <h1>H&M HOME</h1>
+          <div class="list">
+            <div class="item item1">
+              <figure>
+                <img src="img/room.jpg" alt="상품" />
+                <span>dlal</span>
+                <div class="price">
+                  <div class="price1">
+                    <div>
+                      <p>월 데코레이션</p>
+                      <p>₩ 24,900</p>
+                    </div>
+                    <img
+                      class="plus"
+                      src="img/icons8-plus-48.png"
+                      alt="더보기"
+                    />
+                  </div>
+                  <div class="price2">
+                    <div>
+                      <p>터프티드 코튼러그</p>
+                      <p>₩ 29,900</p>
+                    </div>
+                    <img
+                      class="plus"
+                      src="img/icons8-plus-48.png"
+                      alt="더보기"
+                    />
+                  </div>
+                </div>
+                <!-- price end -->
+              </figure>
+              <div class="text">
+                <h2>My room, My rules</h2>
+                <div class="itemlist">
+                  <div class="fir">
                     <figure>
-                        <span>img</span>
+                      <img src="img/room1.jpg" alt="상품" />
+                      <span>dlal</span>
                     </figure>
-                </div>
-                <h1>WEEKLY<BR>BEST ESLLER</h1>
-                <div class="btn">shop now</div>
-            </div><!-- banner end -->
-        </section><!-- sec4 end -->
-
-        <section class="sec5">
-            <div class="inner">
-                <h1>Back To School</h1>
-                <p>Make an entrance in stylish back-to-school fashion</p>
-                <div class="menu">
-                    <ul class="select">
-                        <li class="on">Girls</li>
-                        <li>Boys</li>
-                    </ul><!-- select end-->
-                    <p>VIEW MORE</p>
-                </div><!-- menu end -->
-
-                <div class="swiper mySwiper list">
-                    <div class="swiper-wrapper girl on itemlist">
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/yong8.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>퍼프 슬리브 드레스</p>
-                                <h4>₩ 39,900</h4>
-                            </div>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/yong7.jpg" alt="상품">
-                            </figure>
-                            <p>데님 오버롤 팬츠</p>
-                            <h4>₩39,900</h4>
-                        </div><!-- item end -->
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/yong3.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>리브드 저지 드레스</p>
-                                <h4>₩ 39,900</h4>
-                            </div>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/yong5.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>리본 디테일 스트랩 탑</p>
-                                <h4>₩ 39,900</h4>
-                            </div>
-                        </div><!-- item end -->
-
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/back5.jpg" alt="상품">
-                            </figure>
-                            <p>스트라이프 니트</p>
-                            <h4>₩ 29,900</h4>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/back6.jpg" alt="상품">
-                            </figure>
-                            <p>블랙원피스</p>
-                            <h4>₩ 39,900</h4>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/yong9.jpg" alt="상품">
-                            </figure>
-                            <p>리본 맨투맨</p>
-                            <h4>₩ 24,900</h4>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/back1.jpg" alt="상품">
-                            </figure>
-                            <p>스트라이프 티셔츠</p>
-                            <h4>₩ 19,900</h4>
-                        </div><!-- item end -->
-
+                    <div>
+                      <p>브레이디드 책 수납 바스켓</p>
+                      <p>₩ 39,900</p>
                     </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-
-
-
-                <div class="swiper mySwiper list">
-                    <div class="swiper-wrapper boys itemlist">
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/yong1.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>헨리탑 2피스 세트</p>
-                                <h4>₩ 19,900</h4>
-                            </div>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-
-                            <figure>
-                                <img src="img/yong4-1.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>오버사이즈 셔츠</p>
-                                <h4>₩ 24,900</h4>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/yong6.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>코튼 셔츠 & 넥타이</p>
-                                <h4>₩ 24,900</h4>
-                            </div>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/yong11-1.jpg" alt="상품">
-                            </figure>
-                            <div class="text">
-                                <p>오버사이즈 스웨트셔츠</p>
-                                <h4>₩ 19,900</h4>
-                            </div>
-                        </div><!-- item end -->
-
-
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/boy1-1.jpg" alt="상품">
-                            </figure>
-                            <p>프린트 코튼 티셔츠</p>
-                            <h4>₩ 7,900</h4>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/boy2-1.jpg" alt="상품">
-                            </figure>
-                            <p>Zip-top sweatshirt</p>
-                            <h4>₩ 34,900</h4>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/boy3-1.jpg" alt="상품">
-                            </figure>
-                            <p>Zip-through hoodie</p>
-                            <h4>₩ 24,900</h4>
-                        </div><!-- item end -->
-
-                        <div class="swiper-slide item">
-                            <figure>
-                                <img src="img/boy4-1.jpg" alt="상품">
-                            </figure>
-                            <p>립스탑 파우치 쇼츠</p>
-                            <h4>₩ 29,900</h4>
-                        </div><!-- item end -->
-
-
+                  </div>
+                  <div class="sec">
+                    <figure>
+                      <img src="img/room2.jpg" alt="상품" />
+                      <span>dlal</span>
+                    </figure>
+                    <div>
+                      <p>덮개 수납 바스켓</p>
+                      <p>₩ 19,900</p>
                     </div>
-                    <div class="swiper-scrollbar"></div>
+                  </div>
                 </div>
+                <!-- itemlist end -->
+              </div>
+              <!-- text end -->
+            </div>
+            <!-- item end -->
+            <div class="item item2">
+              <figure>
+                <img src="img/home.jpg" alt="상품" />
+                <span>dlal</span>
+                <div class="price">
+                  <div class="price1">
+                    <div>
+                      <p>플라워패턴 이불커버세트</p>
+                      <p>₩ 69,900</p>
+                    </div>
+                    <img
+                      class="plus"
+                      src="img/icons8-plus-48.png"
+                      alt="더보기"
+                    />
+                  </div>
+                </div>
+                <!-- price end -->
+              </figure>
+              <div class="text">
+                <h2>The Bestsellers Shop</h2>
+                <div class="itemlist">
+                  <div class="fir">
+                    <figure>
+                      <img src="img/homeitem.jpg" alt="상품" />
+                      <span>dlal</span>
+                    </figure>
+                    <div>
+                      <p>코튼 테리 핸드 타월</p>
+                      <p>₩ 7,900</p>
+                    </div>
+                  </div>
+                  <div class="sec">
+                    <figure>
+                      <img src="img/homeitem3.jpg" alt="상품" />
+                      <span>dlal</span>
+                    </figure>
+                    <div>
+                      <p>Cotton king size duvet cover set</p>
+                      <p>₩ 69,900</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- itemlist end -->
+              </div>
+              <!-- text end -->
+            </div>
+            <!-- item end -->
 
-            </div><!-- inner end -->
-        </section><!-- sec5 end -->
+            <div class="item item3">
+              <figure>
+                <img src="img/room3.jpg" alt="상품" />
+                <span>dlal</span>
+                <div class="price">
+                  <div class="price1">
+                    <div>
+                      <p>우드 행어</p>
+                      <p>₩ 14,900</p>
+                    </div>
+                    <img
+                      class="plus"
+                      src="img/icons8-plus-48.png"
+                      alt="더보기"
+                    />
+                  </div>
+                </div>
+                <!-- price end -->
+              </figure>
+              <div class="text">
+                <h2>Home Decorations</h2>
+                <div class="itemlist">
+                  <div class="fir">
+                    <figure>
+                      <img src="img/home3.jpg" alt="상품" />
+                      <span>dlal</span>
+                    </figure>
+                    <div>
+                      <p>스톤웨어 화병 2피스 세트</p>
+                      <p>₩29,900</p>
+                    </div>
+                  </div>
+                  <div class="sec">
+                    <figure>
+                      <img src="img/homeitem4.jpg" alt="상품" />
+                      <span>dlal</span>
+                    </figure>
+                    <div>
+                      <p>어시메트릭 스톤웨어 화병</p>
+                      <p>₩39,900</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- itemlist end -->
+              </div>
+              <!-- text end -->
+            </div>
+            <!-- item end -->
+          </div>
+          <!-- list end -->
+        </div>
+        <!-- inner end -->
+      </section>
+      <!-- sec6 end -->
 
+      <footer>
+        <div class="inner">
+          <p>
+            이 사이트의 콘텐츠는 저작권 보호를 받고 있는 H & M Hennes & Mauritz
+            AB의 자산입니다.
+          </p>
+          <ul>
+            <li>법인명 에이치앤엠헤네스앤모리츠 주식회사</li>
+            <li>통신판매업신고번호 : 2022-서울강남-01184</li>
+            <li>사업자등록번호: 220-87-83339</li>
+          </ul>
+          <ul>
+            <li>대표자 : 아담칼슨,아네타포쿠친스카</li>
+            <li>서울특별시 강남구 영동대로 421, 9층 삼탄빌딩 (대치동) 06182</li>
+            <li>대표번호 080-822-0220</li>
+            <li>info.kr@hm.com</li>
+          </ul>
+          <ul class="sns">
+            <li>
+              <a href="https://www.facebook.com/hm"
+                ><img src="img/icons8-페이스-북-30.png" alt="페이스북"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/hmsouthkorea"
+                ><img src="img/icons8-지저귀다-32.png" alt="트위터"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hm/"
+                ><img src="img/icons8-인스-타-그램-30.png" alt="인스타그램"
+              /></a>
+            </li>
+            <li>
+              <a href="http://www.youtube.com/user/hennesandmauritz"
+                ><img src="img/icons8-유튜브-재생-48.png" alt="유튜브"
+              /></a>
+            </li>
+            <li>
+              <a href="http://naver.me/F5ZGDdIf"
+                ><img src="img/icons8-엔-50.png" alt="네이버"
+              /></a>
+            </li>
+            <li>
+              <a href="https://plus.kakao.com/home/@H&M"
+                ><img
+                  src="img/icons8-kakaotalk-or-katalk-is-a-free-mobile-instant-messaging-application-for-smartphones-48.png"
+                  alt="카카오톡"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/hm/"
+                ><img src="img/icons8-클립-30.png" alt="핀터레스트"
+              /></a>
+            </li>
+          </ul>
+          <h1><img src="img/1x/Asset 1.png" alt="푸터로고" /></h1>
 
-        <section class="sec6">
-            <div class="inner">
-                <h1>H&M HOME</h1>
-                <div class="list">
-                    <div class="item item1">
-                        <figure>
-                            <img src="img/room.jpg" alt="상품">
-                            <span>dlal</span>
-                            <div class="price">
-                                <div class="price1">
-                                    <div>
-                                        <p>월 데코레이션</p>
-                                        <p>₩ 24,900</p>
-                                    </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
-                                </div>
-                                <div class="price2">
-                                    <div>
-                                        <p>터프티드 코튼러그</p>
-                                        <p>₩ 29,900</p>
-                                    </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
-                                </div>
-                            </div><!-- price end -->
-                        </figure>
-                        <div class="text">
-                            <h2>My room, My rules</h2>
-                            <div class="itemlist">
-                                <div class="fir">
-                                    <figure>
-                                        <img src="img/room1.jpg" alt="상품">
-                                        <span>dlal</span>
-                                    </figure>
-                                    <div>
-                                        <p>브레이디드 책 수납 바스켓</p>
-                                        <p>₩ 39,900</p>
-                                    </div>
-                                </div>
-                                <div class="sec">
-                                    <figure>
-                                        <img src="img/room2.jpg" alt="상품">
-                                        <span>dlal</span>
-                                    </figure>
-                                    <div>
-                                        <p>덮개 수납 바스켓</p>
-                                        <p>₩ 19,900</p>
-                                    </div>
-                                </div>
-                            </div><!-- itemlist end -->
-                        </div><!-- text end -->
-                    </div><!-- item end -->
-                    <div class="item item2">
-                        <figure>
-                            <img src="img/home.jpg" alt="상품">
-                            <span>dlal</span>
-                            <div class="price">
-                                <div class="price1">
-                                    <div>
-                                        <p>플라워패턴 이불커버세트</p>
-                                        <p>₩ 69,900</p>
-                                    </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
-                                </div>
-                            </div><!-- price end -->
-                        </figure>
-                        <div class="text">
-                            <h2>The Bestsellers Shop</h2>
-                            <div class="itemlist">
-                                <div class="fir">
-                                    <figure>
-                                        <img src="img/homeitem.jpg" alt="상품">
-                                        <span>dlal</span>
-                                    </figure>
-                                    <div>
-                                        <p>
-                                            코튼 테리 핸드 타월</p>
-                                        <p>₩ 7,900</p>
-                                    </div>
-                                </div>
-                                <div class="sec">
-                                    <figure>
-                                        <img src="img/homeitem3.jpg" alt="상품">
-                                        <span>dlal</span>
-                                    </figure>
-                                    <div>
-                                        <p>Cotton king size duvet cover set</p>
-                                        <p>₩ 69,900</p>
-                                    </div>
-                                </div>
-                            </div><!-- itemlist end -->
-                        </div><!-- text end -->
-                    </div><!-- item end -->
-
-                    <div class="item item3">
-                        <figure>
-                            <img src="img/room3.jpg" alt="상품">
-                            <span>dlal</span>
-                            <div class="price">
-                                <div class="price1">
-                                    <div>
-                                        <p>우드 행어</p>
-                                        <p>₩ 14,900</p>
-                                    </div>
-                                    <img class="plus" src="img/icons8-plus-48.png" alt="더보기">
-                                </div>
-                            </div><!-- price end -->
-                        </figure>
-                        <div class="text">
-                            <h2>Home Decorations</h2>
-                            <div class="itemlist">
-                                <div class="fir">
-                                    <figure>
-                                        <img src="img/home3.jpg" alt="상품">
-                                        <span>dlal</span>
-                                    </figure>
-                                    <div>
-                                        <p>스톤웨어 화병 2피스 세트</p>
-                                        <p>₩29,900</p>
-                                    </div>
-                                </div>
-                                <div class="sec">
-                                    <figure>
-                                        <img src="img/homeitem4.jpg" alt="상품">
-                                        <span>dlal</span>
-                                    </figure>
-                                    <div>
-                                        <p>어시메트릭 스톤웨어 화병</p>
-                                        <p>₩39,900</p>
-                                    </div>
-                                </div>
-                            </div><!-- itemlist end -->
-                        </div><!-- text end -->
-                    </div><!-- item end -->
-                </div><!-- list end -->
-            </div><!-- inner end -->
-        </section><!-- sec6 end -->
-
-        <footer>
-            <div class="inner">
-                <p>이 사이트의 콘텐츠는 저작권 보호를 받고 있는 H & M Hennes & Mauritz AB의 자산입니다. </p>
-                <ul>
-                    <li>법인명 에이치앤엠헤네스앤모리츠 주식회사</li>
-                    <li>통신판매업신고번호 : 2022-서울강남-01184</li>
-                    <li>사업자등록번호: 220-87-83339</li>
-                </ul>
-                <ul>
-                    <li>대표자 : 아담칼슨,아네타포쿠친스카</li>
-                    <li>서울특별시 강남구 영동대로 421, 9층 삼탄빌딩 (대치동) 06182</li>
-                    <li>대표번호 080-822-0220</li>
-                    <li>info.kr@hm.com</li>
-                </ul>
-                <ul class="sns">
-                    <li><a href="https://www.facebook.com/hm"><img src="img/icons8-페이스-북-30.png" alt="페이스북"></a></li>
-                    <li><a href="https://twitter.com/hmsouthkorea"><img src="img/icons8-지저귀다-32.png" alt="트위터"></a></li>
-                    <li><a href="https://www.instagram.com/hm/"><img src="img/icons8-인스-타-그램-30.png" alt="인스타그램"></a>
-                    </li>
-                    <li><a href="http://www.youtube.com/user/hennesandmauritz"><img src="img/icons8-유튜브-재생-48.png"
-                                alt="유튜브"></a></li>
-                    <li><a href="http://naver.me/F5ZGDdIf"><img src="img/icons8-엔-50.png" alt="네이버"></a></li>
-                    <li><a href="https://plus.kakao.com/home/@H&M"><img
-                                src="img/icons8-kakaotalk-or-katalk-is-a-free-mobile-instant-messaging-application-for-smartphones-48.png"
-                                alt="카카오톡"></a></li>
-                    <li><a href="https://www.pinterest.com/hm/"><img src="img/icons8-클립-30.png" alt="핀터레스트"></a></li>
-                </ul>
-                <h1><img src="img/1x/Asset 1.png" alt="푸터로고"></h1>
-
-                <div class="top">
-                    <h1>TOP</h1>
-                </div><!-- top end -->
-            </div><!-- inner end -->
-        </footer>
-
-    </div><!-- wrap end -->
-</body>
-
+          <div class="top">
+            <h1>TOP</h1>
+          </div>
+          <!-- top end -->
+        </div>
+        <!-- inner end -->
+      </footer>
+    </div>
+    <!-- wrap end -->
+  </body>
 </html>
