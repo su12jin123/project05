@@ -52,8 +52,7 @@ img {
 
 .wrap {
     width: 1920px;
-
-    max-width: 100%;
+    margin: 0 auto;
 }
 
 .main_visual {
@@ -61,6 +60,7 @@ img {
     height: 100vh;
     position: relative;
 }
+
 .main_visual .span.on {
     display: block;
     width: 1920px;
@@ -523,6 +523,9 @@ position: absolute;
     border-bottom: 1px solid #e01926; */
 }
 
+.menu_cont .inner .img img {
+    transition: 2s;
+}
 .menu_cont .inner .img {
     display: flex;
     margin-left: 420px;
@@ -535,7 +538,6 @@ position: absolute;
 
 .menu_cont .inner .img img:hover {
     transform: scale(1.1);
-    transition: 2s;
 }
 
 .menu_cont .inner .item:nth-child(3) .img {
@@ -564,6 +566,8 @@ position: absolute;
     margin-left: 30px;
 }
 
+
+
 .sec1 {
     width: 1920px;
     background-color: #333;
@@ -573,7 +577,7 @@ position: absolute;
     width: 1440px;
     height: 500px;
     margin: 0 auto;
-    padding: 100px 0 115px;
+    padding: 100px 0;
 }
 
 .sec1 .inner .list {
@@ -645,13 +649,11 @@ position: absolute;
 .sec2 {
     background-color: #333;
     padding-bottom: 50px;
-    height: 100vh;
     width: 1920px;
 }
 
 .sec2 .inner {
     width: 1440px;
-    height: 100vh;
     margin: 0 auto;
     padding-top: 50px;
 }
@@ -726,7 +728,7 @@ position: absolute;
     font-size: 15px;
 }
 
-.sec2 .inner .box .item .text h4{
+.sec2 .inner .box .item .text h4 {
     font-size: 16px;
     font-weight: 600;
 }
@@ -782,13 +784,11 @@ position: absolute;
 /* -----------------------👇👇👇👇sec3👇👇👇👇------------------------------ */
 .sec3 {
     background-color: #333;
-    height: 100vh;
     width: 1920px;
 }
 
 .sec3 .inner {
     width: 1440px;
-    height: 100vh;
     margin: 0 auto;
     padding-top: 100px;
 }
@@ -1109,9 +1109,8 @@ position: absolute;
 /* --------------------------sec4 end-------------------------------------- */
 .sec5 .inner {
     width: 1440px;
-    height: 100vh;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .sec5 .inner h1 {
@@ -1209,7 +1208,7 @@ position: absolute;
 /* --------------------------sec5 end---------------------------------------- */
 .sec6 .inner {
     width: 1440px;
-    margin: 0 auto 150px;
+    margin: 150px auto;
 }
 
 .sec6 .inner span {
@@ -1359,7 +1358,7 @@ position: absolute;
     line-height: 25px;
     text-align: center;
     /* display: none; */
-    font-size: 17px;
+    font-size: 16px;
     font-family: "Pretendard-Regular";
 }
 
@@ -1437,6 +1436,7 @@ position: absolute;
     font-family: "Pretendard-Regular";
     margin-left: 10px;
 }
+
 
 .sec6 .inner .list .item .itemlist > div:hover {
     background-color: #eae7e8;
